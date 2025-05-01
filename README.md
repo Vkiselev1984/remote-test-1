@@ -59,4 +59,3 @@ git add .
 git commit -m "Resolved merge conflicts"
 git push origin main
 ```
->>>>>>> d65d5a6f1e838474a6328fdc6f641a18ba1a9e7f
