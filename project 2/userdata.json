@@ -1,0 +1,11 @@
+[
+    {
+        "user": {
+            "first_name": "test3",
+            "last_name": "test",
+            "email": "test3@test",
+            "phone": "1234"
+        },
+        "timestamp": "2025-05-03T00:28:52.361870"
+    }
+]
