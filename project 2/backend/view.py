@@ -7,4 +7,4 @@ class UserView:
 
     @staticmethod
     def success():
-        return "<h3>Данные успешно отправлены!</h3>"
+        return "<h3>Data sent successfully!</h3>"
