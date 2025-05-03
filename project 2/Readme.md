@@ -111,3 +111,33 @@ After confirmation of the upload, you need to merge pull request.
 We got a new branch with user data.
 
 ![user-data](./img/user-data.png)
+
+Let's upload the changes to the local repository:
+
+```Terminal
+git pull origin main
+```
+
+Our user-data.json file has been updated.
+
+Let's add a few more users in the same way.
+
+Great! We've added some users to our file and can now delete the branches we created earlier if we don't need them anymore.
+
+We can also list the branches in the terminal with the command:
+
+```Terminal
+git branch
+```
+
+![branch](./img/branch.png)
+
+Using the command "git log --oneline --graph --all" we can see all the branches and their commits in a graphical form.
+
+![graph](./img/graph.png)
+
+Using the "git diff branch-name" command we can see the specific changes that were made in a branch.
+
+![diff](./img/diff.png)
+
+Using the command "git diff main..user-7255098a" we can compare our main branch with the user branch.
