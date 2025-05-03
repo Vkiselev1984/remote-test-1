@@ -141,26 +141,3 @@ Using the "git diff branch-name" command we can see the specific changes that we
 ![diff](./img/diff.png)
 
 Using the command "git diff main..user-7255098a" we can compare our main branch with the user branch.
-
-![diff-main-user](./img/diff-main-user.png)
-
-Let's look at all the commits and cancel the 3 ones of interest:
-
-```Terminal
-git log
-```
-
-![log](./img/log.png)
-
-```Terminal
-git revert ae5160429dfe6100002dcd0b203f0b8b495f04c8
-git revert 783656f1123a7e812184fa947529a760b35a1815
-git revert 412e8282d447d47938a788fedb751a5a30f828c1
-git revert 669053f5c001343fcff3a793c8b11015634f284d
-```
-
-Or you can use a range
-
-```Terminal
-git revert 669053f5c001343fcff3a793c8b11015634f284d..HEAD
-```
