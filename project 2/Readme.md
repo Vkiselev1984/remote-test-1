@@ -111,3 +111,66 @@ After confirmation of the upload, you need to merge pull request.
 We got a new branch with user data.
 
 ![user-data](./img/user-data.png)
+
+Let's upload the changes to the local repository:
+
+```Terminal
+git pull origin main
+```
+
+Our user-data.json file has been updated.
+
+Let's add a few more users in the same way.
+
+Great! We've added some users to our file and can now delete the branches we created earlier if we don't need them anymore.
+
+We can also list the branches in the terminal with the command:
+
+```Terminal
+git branch
+```
+
+![branch](./img/branch.png)
+
+Using the command "git log --oneline --graph --all" we can see all the branches and their commits in a graphical form.
+
+![graph](./img/graph.png)
+
+Using the "git diff branch-name" command we can see the specific changes that were made in a branch.
+
+![diff](./img/diff.png)
+
+Using the command "git diff main..user-7255098a" we can compare our main branch with the user branch.
+
+![diff-main-user](./img/diff-main-user.png)
+
+Let's look at all the commits and cancel the 3 ones of interest:
+
+```Terminal
+git log
+```
+
+![log](./img/log.png)
+
+```Terminal
+git revert ae5160429dfe6100002dcd0b203f0b8b495f04c8
+git revert 783656f1123a7e812184fa947529a760b35a1815
+git revert 412e8282d447d47938a788fedb751a5a30f828c1
+git revert 669053f5c001343fcff3a793c8b11015634f284d
+```
+
+Or can use a range
+
+```Terminal
+git revert 669053f5c001343fcff3a793c8b11015634f284d..HEAD
+```
+
+We got an error because we are trying to undo a merge commit, but we did not specify which branch should be considered "master" when undoing.
+
+To fix the situation, we specify the "-m" option and continue deleting using "git revert --continue".
+
+> Attention! Be careful, if you make changes to other files during the work, these changes will also be deleted. In my case, the Readme.md file was rolled back and the images were deleted.
+
+![undo](./img/undo.png)
+
+Let's look at the contents of the userdata.json file and make sure that the data of the last two users with email addresses test4@test and test3@test have been deleted.
