@@ -101,3 +101,13 @@ ssh-add ~/.ssh/id_ed25519
 ## Practice
 
 So we have launched the project and now we will enter the user data in the browser. After confirmation, a window about successful execution will appear, and on the remote server a pull request with a new branch.
+
+![pull-request](./img/pull-request.png)
+
+After confirmation of the upload, you need to merge pull request.
+
+![merge](./img/merge.png)
+
+We got a new branch with user data.
+
+![user-data](./img/user-data.png)
