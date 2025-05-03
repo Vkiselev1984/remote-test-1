@@ -1,3 +1,4 @@
+# Ignore Python temporary files and folders
 __pycache__/
 *.pyc
 *.pyo
@@ -9,21 +10,36 @@ dist/
 build/
 .eggs/
 
+# Ignore Python virtual environment
 venv/
 env/
 .virtualenv/
 .venv/
 
+# Ignore development environment and editor files
 .idea/
 .vscode/
 *.sublime-project
 *.sublime-workspace
 *.iml
 
+# Ignore system files
 .DS_Store
 Thumbs.db
 
+# Ignore configuration files containing sensitive data
 config.json
+settings.json
+
+# Ignore user data files and temporary files
+temp.json
 *.log
+
+# Ignore files that may contain secret keys or passwords
 *.env
 .env
+secrets.json
+
+# Ignore local database files (if used)
+*.sqlite3
+*.db
